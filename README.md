@@ -101,12 +101,14 @@ public class CourseMaterial {
     private Course course;
 }
 ```
+**Course Material Table**<br>
+![Course Material Image](Image/course_material.png) <br>
 - cascasde : this will update all the table which are declared or mapped in another class
 - fetch : if the current entity class is  save than mentioned entity will fetch after saved, if it's EAGER than it'll fetch before saving the current entity
 - In one-to-one @JoinColumn will create the extra foreign_key table in here own table , and we have to give the reference of mapping class reference 
 ### One-To-Many
 - In one to many mapping The important thing is the extra field will crate at given specify table , not in own table like one-to-one
-Let's take example and see how one-many works
+Let's take example and see how one-many works<br>
 **Course**
 ```java
 @Entity
@@ -143,6 +145,10 @@ public class Teacher {
     private List<Course> courses;
 }
 ```
+**Course Table**<br>
+![Course Image](Image/course.png) <br>
+**Teacher Table**<br>
+![Teacher Image](Image/teacher.png) <br>
 here **teacher_id** will create in Course table 
 ### Many-to-One
 ```java
